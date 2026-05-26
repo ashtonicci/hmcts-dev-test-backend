@@ -1,7 +1,7 @@
 package uk.gov.hmcts.reform.dev.dtos.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import uk.gov.hmcts.reform.dev.models.TaskStatus;
 
@@ -10,7 +10,7 @@ import uk.gov.hmcts.reform.dev.models.TaskStatus;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateTaskStatusRequest {
-    @NotBlank
+    @NotNull
     @Schema(example = "IN_PROGRESS")
     private TaskStatus status;
 }
